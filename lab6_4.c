@@ -36,10 +36,14 @@ int main()
     int savemax,count1=0,count2=0;
     for(int t=0;t<num;t++)
     {
-        if(max<=wow[t])
+        if(max<wow[t])
         {
             max=wow[t];
             savemax=t;
+        }
+        else if(max==wow[t])
+        {
+            continue;
         }
     }
     for(int i=0;i<2;i++)
