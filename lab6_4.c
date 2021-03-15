@@ -74,11 +74,8 @@ int main()
             count2++;
         }
     }
-    if(min1>=min2)
-    {
-        getza=cheak[savetemp2];
-    }
-    else if(min1<min2)
+    getza=cheak[savetemp2];
+    if(min1<min2)
     {
         getza=cheak[savetemp1];
     }
