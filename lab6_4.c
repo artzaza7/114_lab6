@@ -35,12 +35,12 @@ int main()
     int savemax,savemin;
     for(int t=0;t<num;t++)
     {
-        if(max<wow[t])
+        if(max<=wow[t])
         {
             max=wow[t];
             savemax=t;
         }
-        if(min>wow[t])
+        if(min>=wow[t])
         {
             min=wow[t];
             savemin=t;
