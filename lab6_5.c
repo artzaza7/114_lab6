@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    long long W,H,count=0;
+    long long W,H,sum=0;
     scanf("%lld %lld",&W,&H);
     long long king[H][W];
     for(long long i=0;i<H;i++)
@@ -16,9 +16,23 @@ int main()
     {
         for(long long j=0;j<W;j++)
         {
-            printf("%lld ",king[i][j]);
+            sum=sum+king[i][j];
         }
-        printf("\n");
     }
+    long long first=sum,save=sum;
+    while (1)
+    {
+        if(first%(W*H)==0)
+        {
+            break;
+        }
+        else
+        {
+            sum=sum+1;
+            first=sum;
+        }
+    }
+    printf("%lld",first-save);
+    
     return 0;
 }
